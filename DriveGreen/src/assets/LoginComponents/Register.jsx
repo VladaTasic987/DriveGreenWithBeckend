@@ -12,21 +12,9 @@ export function Register() {
 
 const [isChecked, setIsChecked] = useState(false);
 
-const { visible, toggleVisible, email, password, getEmail, getPassword, name, getName, registerUser, existingEmail, clearInputs} = useUser();
+const { visible, toggleVisible} = useUser();
 
-const passwordRegex = /^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/;
 
-const canRegister = 
-    password.length >= 8 &&
-    passwordRegex.test(password) &&
-    !existingEmail &&
-    isChecked &&
-    name.length > 5
-    ;
-
-const handleCheckboxChange = () => {
-    setIsChecked(prev => !prev);
-  };
 
   
 
@@ -52,8 +40,6 @@ return (
             Ime i prezime
             <br />
             <input 
-            onChange={(e) => getName(e)}
-            value={name}
             type="text"
             placeholder='Upisite Vase ime i prezime...'
             />
@@ -65,8 +51,6 @@ return (
             Email
             <br />
             <input 
-            value={email}
-            onChange={(e) => getEmail(e)}
             type="text"
             placeholder='Upisite Vas email...'
             />
@@ -78,8 +62,6 @@ return (
             Lozinka
             <br />
             <input 
-            value={password}
-            onChange={(e) => getPassword(e)}
             type={visible ? "text" : "password"}
             placeholder='Upisite Vasu lozinku...'
             />
@@ -105,8 +87,6 @@ return (
     <input 
             type="checkbox" 
             className='check-box'
-            checked={isChecked}
-            onChange={handleCheckboxChange}
             />
     <p className='agree-text'>Saglasan sam sa politikom i opstim uslovima poslovanja</p>
     </div>
@@ -114,20 +94,14 @@ return (
 
     
         <Link 
-        to={canRegister ? "/MapStart" : ""}
-        className={canRegister ? 'link-to-map' : "disabled-link-to-map"}
-        onClick={()=> {if(canRegister) {
-            registerUser()
-        }
-        clearInputs()
-        }}
+        to="/MapStart"
+        className='link-to-map'
         >Registruj se</Link>
 
         <h4 className='existing-user'>Postojeci korisnik? 
         <Link
         to="/Login"
         className='link-to-login'
-        onClick={clearInputs}
         >Prijavi se!</Link> 
         </h4>
 
@@ -141,24 +115,24 @@ return (
         </button>
         
     
-        {existingEmail ?<p className='existing-account'>Postojeci nalog. Ulogujte se</p> : null}
+        {/* <p className='existing-account'>Postojeci nalog. Ulogujte se</p>  */}
 
 
-        {password && !passwordRegex.test(password) ? (
-    <div className='pass-validation-container'>
+        
+    {/* <div className='pass-validation-container'>
         <img 
         className='red-line'
         src={passValidationRed} alt="pass-val" />
         <p className='pass-val-text'>Lozinka je preslaba. Koristite 8 karaktera, jedno veliko slovo i jedan specijalan karakter</p>
-    </div>
-) : passwordRegex.test(password) ? (
-    <div id='pas-container-green'>
+    </div> */}
+     
+    {/* <div id='pas-container-green'>
         <img 
         className='green-line'
         src={passValidationGreen} alt="green-line" />
         <p className='green-text'>Jaka lozinka</p>
-    </div>
-) : null}
+    </div> */}
+
 
 </div>
 

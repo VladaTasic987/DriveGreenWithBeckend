@@ -4,7 +4,7 @@ import { useUser } from '../Context';
 
 export function ForgotPasswordEmail() {
 
-    const {  email, getEmail, existingEmail, clearInputs} = useUser();
+    const {} = useUser();
     return (
         <div id="forgot-password-container">
 
@@ -28,8 +28,6 @@ export function ForgotPasswordEmail() {
                     Email
                     <br />
                     <input
-                        value={email}
-                        onChange={getEmail}
                         type="text"
                         placeholder='Upišite Vaš email...'
                     />
@@ -38,9 +36,8 @@ export function ForgotPasswordEmail() {
 
 
             <Link
-                className={ existingEmail ? "send-code" : "send-code-disabled"}
-                to={existingEmail ? "/passwordCode" : ""}
-                onClick={clearInputs}
+                className= "send-code"
+                to="/passwordCode"
                 >
                 Pošalji kod
             </Link>

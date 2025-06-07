@@ -8,11 +8,7 @@ import { useState } from 'react';
 
 export function Login() {
 
-const { visible, toggleVisible, email, password, getEmail, getPassword, existingEmail, existingPassword, clearInputs } = useUser();
-
-const [typingStarted, setTypingStarted] = useState(false)
-
-const userCredentials = existingPassword(email, password) && existingEmail;
+const { visible, toggleVisible} = useUser();
 
     return (
         <div id='login-card'>
@@ -40,11 +36,6 @@ const userCredentials = existingPassword(email, password) && existingEmail;
                     Email
                     <br />
                     <input
-                        onChange={(e)=> {
-                            getEmail(e)
-                            setTypingStarted(true)
-                        }}
-                        value={email}
                         type="text"
                         placeholder='Vaša email adresa'
                     />
@@ -56,11 +47,6 @@ const userCredentials = existingPassword(email, password) && existingEmail;
                     Lozinka
                     <br />
                     <input
-                        onChange={(e)=> {
-                            getPassword(e)
-                            setTypingStarted(true)
-                        }}
-                        value={password}
                         type={visible ? "text" : "password"}
                         placeholder='Vaša lozinka'
                     />
@@ -79,7 +65,6 @@ const userCredentials = existingPassword(email, password) && existingEmail;
             </div>
 
             <Link
-            onClick={clearInputs}
                 className='link-to-forgot'
                 to="/forgot">
                 <h4>Zaboravljena lozinka?</h4>
@@ -87,18 +72,16 @@ const userCredentials = existingPassword(email, password) && existingEmail;
 
 
             <Link
-            onClick={clearInputs}
 
-            className={existingPassword(email, password) ? 'link-to-map' : "link-to-map-disabled"}
+            className='link-to-map'
 
-            to={existingEmail && existingPassword(email, password) ? "/mapStart" : ""}
+            to="/mapStart"
             
             >Prijavi se
             </Link>
 
             <h4 className='new-user'>Novi Korisnik? 
                 <Link 
-                onClick={clearInputs}
                 to="/register"
                 className='link-to-register'>
                 Kreiraj svoj nalog!
@@ -111,12 +94,11 @@ const userCredentials = existingPassword(email, password) && existingEmail;
                     alt="googleicon" />
                 Koristi Google nalog</button>
 
-                <p
+                {/* <p
                     className="warrning-pass"
-                    style={{ display: typingStarted && !userCredentials ? "block" : "none"}}
                     >
                     Pogrešna lozinka ili email
-                </p>
+                </p> */}
         </div>
     )
 
