@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "./assets/LoginComponents/Wellcome";
+@import "./assets/LoginComponents/Login";
+@import "./assets/LoginComponents/Register";
+@import "./assets/LoginComponents/ForgotPasswordEmail";
+@import "./assets/LoginComponents/RegisterPartner";
+@import "./assets/LoginComponents/ForgotCodePassword";
+@import "./assets/MapComponents/MapStart";
+@import "./assets/MapComponents/ViewMoreCard";
+@import "./assets/MapComponents/ReservedCharger";
+@import "./assets/MapComponents/SuccessfulDestination";
+@import "./assets/MapComponents/ChargingProgress";
+@import "./assets/MapComponents/CongradulationsCharging";
+@import "./assets/MapComponents/BusinessConditions";
+@import "./assets/MapComponents/MapPinsLegends";

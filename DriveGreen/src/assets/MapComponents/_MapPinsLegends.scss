@@ -1,0 +1,59 @@
+#container {
+    width: 390px;
+    min-height: 844px;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+
+    @import "../Layout/MapHeader";
+    @import "../Layout/MapFooter";
+
+    .pins-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 29px;
+        margin-top: 82px;
+        gap: 23px;
+    }
+
+    .pins-title {
+        margin: 39px 0 0 31px;
+        color: #FFC801;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+
+    }
+
+    .black-pin {
+        width: 36px;
+        height: 34.76px;
+    }
+
+    .pins-legend {
+        display: flex;
+        flex-direction: column;
+        margin: 55px 0 0 59px;
+        gap: 18.24px;
+    }
+
+    .pins-legend div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 104px;
+    }
+
+    .pins-legend span {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 100%;
+
+
+    }
+
+}

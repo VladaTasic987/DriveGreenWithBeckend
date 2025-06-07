@@ -1,0 +1,109 @@
+
+#wellcome-card {
+    width: 390px;
+    height: 844px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+        img {
+            width: 184px;
+            height: 166px;
+        }
+
+        p {
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            color: #2c2c2c;
+            opacity: 60%;
+            margin-top: 100px;
+        }
+
+        .link-to-register {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 342px;
+            height: 48px;
+            border-radius: 8px;
+            background-color: #5ed48c;
+            border: none;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .link-to-register:hover {
+            background-color: rgba(94, 212, 140, 0.5);
+        }
+
+        .link-to-register:active {
+            background-color: rgba(56, 175, 102, 1);
+        }
+
+        .link-to-login {
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            color: #FFFFFF;
+            text-decoration: none;
+            color: #5ed48c;
+        }
+
+        h4 {
+            margin-top: 25px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            color: #2c2c2c;
+        }
+
+        .link-to-register {
+            margin-top: 25px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            text-decoration: none;
+            color: #ffffff;;
+        }
+
+        .link-to-registerPartner {
+            margin-top: 25px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            text-decoration: none;
+            color: #000000;;
+        }
+
+        .link-to-registerPartner {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 342px;
+            height: 48px;
+            border-radius: 8px;
+            background-color: #ffdb63;
+            border: none;
+            margin-top: 15px;
+        }
+
+        .link-to-registerPartner:hover {
+            background-color: rgba(255, 219, 99, 0.6);
+        }
+
+        .link-to-registerPartner:active {
+            background-color: rgba(246, 192, 13, 1);
+        }
+
+
+}

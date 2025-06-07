@@ -1,0 +1,111 @@
+#map-footer {
+        width: 100%;
+        height: 59px;
+        border-radius: 0px 0px 20px 20px;
+        background-color: #5ed48c;
+        position: absolute;
+        bottom: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer-left {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 50%;
+                gap: 5px;
+        }
+
+        .thunder-img {
+                margin-left: 10px;
+        }
+
+        .pin-legend {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+        }
+
+        .pin-paragraph {
+                font-family: Plus Jakarta Sans;
+                font-weight: 700;
+                font-size: 10px;
+                color: #ffffff;
+        }
+
+        .footer-text {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 78px;
+        }
+
+
+        .click-more {
+                font-family: Plus Jakarta Sans;
+                font-weight: 300;
+                font-size: 10px;
+                color: #ffffff;
+                text-decoration: none;
+        }
+
+        .click-more:hover {
+                color: #338152;
+        }
+
+        .click-more:active {
+                color: #212121;
+        }
+
+        .arrow-img {
+                width: 8px;
+                height: 9px;
+                margin-left: 4px;
+        }
+
+        .footer-right {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                flex-direction: column;
+                width: 50%;
+                margin-right: 15px;
+        }
+
+        .condition-text {
+                font-family: Plus Jakarta Sans;
+                font-weight: 700;
+                font-size: 10px;
+                color: #ffffff;
+        }
+
+        .right-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+
+        .paragraph-left {
+                font-family: Plus Jakarta Sans;
+                font-weight: 300;
+                font-size: 10px;
+                color: #ffffff;
+                text-decoration: none;
+        }
+
+        .paragraph-left:hover {
+                color: #338152;
+        }
+
+        .paragraph-left:active {
+                color: #212121;
+        }
+
+
+        .arrow-img {
+                width: 8px;
+                height: 8px;
+        }
+}

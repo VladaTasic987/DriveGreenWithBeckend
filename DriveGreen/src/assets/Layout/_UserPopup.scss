@@ -1,0 +1,66 @@
+
+
+#user-popup {
+
+    width: 127px;
+    height: 83px;
+    border-radius: 8px;
+    border: 1px solid rgba(227, 227, 227, 1);
+    background-color: rgb(253, 252, 252);
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    z-index: 10;
+    top: 45px;
+    left: 200px;
+
+        &:hover {
+            background-color: white;
+            opacity: 1;
+        }
+
+        p {
+            font-family: Plus Jakarta Sans;
+            font-weight: 500;
+            font-size: 12px;
+            color: rgba(44, 44, 44, 0.4);
+            margin-right: 9px;
+            cursor: pointer;
+        }
+        
+        p:hover {
+            color: rgba(94, 212, 140, 1);
+        }
+
+        h4 {
+            font-family: Plus Jakarta Sans;
+            font-weight: 500;
+            font-size: 12px;
+            color: rgba(44, 44, 44, 0.4);
+            margin-right: 9px;
+            cursor: pointer;
+        }
+
+        h4:hover {
+            color: rgba(94, 212, 140, 1);
+        }
+
+        h5 {
+            font-family: Plus Jakarta Sans;
+            font-weight: 500;
+            font-size: 12px;
+            color: rgba(44, 44, 44, 0.4);
+            margin-right: 9px;
+            cursor: pointer;
+        }
+
+        h5:hover {
+            color: rgba(94, 212, 140, 1);
+        }
+
+}
+

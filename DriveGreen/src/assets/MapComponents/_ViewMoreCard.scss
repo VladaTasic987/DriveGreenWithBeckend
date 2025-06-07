@@ -1,0 +1,203 @@
+#container {
+    width: 390px;
+    min-height: 844px;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @import "../Layout/MapHeader";
+    @import "../Layout/MapFooter";
+
+    .view-more-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 29px;
+        margin-top: 82px;
+        gap: 23px;
+    }
+
+    .link-to-welcome {
+        font-family: Plus Jakarta Sans;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        color: #2c2c2c;
+        text-decoration: none;
+    }
+
+    .station-image {
+        margin: 24px auto 0 auto;
+    }
+
+    .station-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .station-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 31px 0 31px;
+    }
+
+    .station-header h3 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        color: #FFC801;
+        margin-top: 13px;
+    }
+
+    .station-header img {
+        margin-top: 11px;
+        width: 26px;
+        height: 24px;
+    }
+
+    .station-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 26px 0 31px;
+    }
+
+    .station-meta p {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        padding-top: 8px;
+    }
+
+    .station-rating {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .station-rating img {
+        padding-top: 22px;
+    }
+
+    .station-rating span {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 100%;
+        color: #FFC801;
+        text-align: end;
+        padding-top: 6px;
+        padding-right: 4px;
+    }
+
+    .station-options {
+        font-family: 'Amiko', sans-serif;
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid #EAEBEC;
+        border-radius: 8px;
+        padding: 17px 23px 8px 29px;
+        margin: 36px 9px 0 15px;
+    }
+
+    .option-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .option-title {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 1px;
+    }
+
+    .option-title-one {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+    }
+
+    .option-sub {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        color: #8A8A8A;
+    }
+
+    .station-time {
+        font-family: 'Amiko', sans-serif;
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid #EAEBEC;
+        border-radius: 8px;
+        padding: 11px 18px 8px 31px;
+        margin: 4px 9px 19px 15px;
+    }
+
+    .time-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .time-box p {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        color: #8A8A8A;
+        margin-bottom: 6px;
+    }
+
+    .arrival {
+        text-align: start;
+    }
+
+    .time {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 1px;
+        color: #395B87;
+        margin-top: 3px;
+    }
+
+
+    .arrival-departure span {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        margin-right: 6px;
+    }
+
+    .reserve-button {
+        all: unset;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        background-color: #5ED48C;
+        width: 366px;
+        height: 41px;
+        border-radius: 24px;
+        border: none;
+        margin: 0 auto 0 auto;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reserve-button:hover {
+        background-color: rgba(94, 212, 140, 0.5);
+    }
+
+}

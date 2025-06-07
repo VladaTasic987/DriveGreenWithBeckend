@@ -1,0 +1,135 @@
+
+#map-start-container {
+    width: 390px;
+    height: 844px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+
+
+        @import "../Layout/MapHeader.scss";
+        @import "../Layout/MapBackground.scss";
+
+        .map-middle {
+            width: 390px;
+            height: 738px;
+        }
+
+        .map-background {
+            width: 390px;
+            height: 738px;
+        }
+
+        .car-location {
+            position: absolute;
+            width: 130px;
+            height: 110px;
+            left: 279px;
+            top: 665px;
+        }
+        .charger-location {
+
+            box-sizing: border-box;
+            position: absolute;
+            width: 23.8px;
+            height: 22.98px;
+            left: 76px;
+            top: 350px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 1px 1px #0000001a;
+        }
+        .pulse {
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+        0% {
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+        }
+        100% {
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+        }
+        }
+
+        .charger-location-text{
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            font-size: 10px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            row-gap: 0px ;
+            padding-right: 30px;
+            color: white;
+            position: absolute;
+            width: 126.97674560546875px;
+            height: 40px;
+            left: 56px;
+            top: 240px;
+            background-color: #5ed48c;
+            border-radius: 10px;
+        }
+
+    .charger-location-text:hover{
+        font-family: Plus Jakarta Sans;
+        font-weight: 600;
+        font-size: 10px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        row-gap: 0px ;
+        padding-right: 30px;
+        color: white;
+        position: absolute;
+        width: 126.97674560546875px;
+        height: 40px;
+        left: 56px;
+        top: 240px;
+        background-color: rgba(94, 212, 140, 0.5);
+        border-radius: 10px;
+    }
+    .charger-location-text:active{
+        font-family: Plus Jakarta Sans;
+        font-weight: 600;
+        font-size: 10px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        row-gap: 0px ;
+        padding-right: 30px;
+        color: white;
+        position: absolute;
+        width: 126.97674560546875px;
+        height: 40px;
+        left: 56px;
+        top: 240px;
+        border-radius: 10px;
+        background-color: rgba(56, 175, 102, 1);
+    }
+
+    .charger-location-text img {
+
+        width: 7.26px;
+        height: 8px;
+    }
+    .first {
+        margin-bottom: -12px;
+        text-align: left;
+    }
+
+
+
+    @import "../Layout/MapFooter.scss";
+
+        
+}
+
+
+
+@import "../Layout/PopUp";
+@import "../Layout/UserPopup";

@@ -1,0 +1,66 @@
+#container {
+    width: 390px;
+    min-height: 844px;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @import "../Layout/MapHeader";
+    @import "../Layout/MapFooter";
+
+    .condition-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 29px;
+        margin-top: 82px;
+        gap: 23px;
+    }
+
+    .main-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        color: #FFC801;
+        max-width: 200px;
+        margin: 31px 0 0 34px;
+    }
+
+    .main-content {
+        font-family: 'Poppins', sans-serif;
+        max-width: 319px;
+        height: 493px;
+        margin: 30px auto 0 auto;
+        padding-top: 10px;
+        overflow-y: auto;
+    }
+
+    .main-content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main-content h3 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 8px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        line-height: 150%;
+
+    }
+
+    .main-content p {
+
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        color: #8A8A8A;
+        margin-bottom: 10px;
+        line-height: 150%;
+    }
+}
