@@ -57,8 +57,10 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         position: relative;
+        flex-direction: column;
+        margin-left: 45px;
     }
 
     
@@ -109,14 +111,16 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         position: relative;
+        flex-direction: column;
+        margin-left: 45px;
     }
 
     .not-vision  {
         position: absolute;
         bottom: 15px;
-        right: 35px;
+        right: 60px;
     }
 
     .login-inputs-password label {

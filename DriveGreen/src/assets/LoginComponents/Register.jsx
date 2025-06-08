@@ -7,14 +7,21 @@ import passValidationRed from '../Images/PasswordValidationRedLine.png';
 import passValidationGreen from '../Images/PasswordValidationGreenLine.png';
 import { useUser } from '../Context';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 export function Register() {
 
-const [isChecked, setIsChecked] = useState(false);
-
 const { visible, toggleVisible} = useUser();
 
+const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
+  const onSubmit = (data) => {
+    console.log("Podaci iz forme:", data);
+  };
 
   
 
@@ -35,40 +42,33 @@ return (
         <h4>Kreiranje naloga</h4> 
     </div>       
 
+
     <div className='name-input'>
-        <label htmlFor="">
-            Ime i prezime
-            <br />
-            <input 
-            type="text"
-            placeholder='Upisite Vase ime i prezime...'
-            />
-        </label>
-    </div> 
+        <label>Ime i prezime</label>
+        <input
+          {...register("fullName", { required: "Ovo polje je obavezno" })}
+        />
+        {errors.fullName && <p>{errors.fullName.message}</p>}
+      </div>
+
 
     <div className='email-input'>
-        <label htmlFor="">
-            Email
-            <br />
-            <input 
-            type="text"
-            placeholder='Upisite Vas email...'
-            />
-        </label>
-    </div>
+        <label>Email</label>
+        <input
+          type="email"
+          {...register("email", { required: "Unesite email adresu" })}
+        />
+        {errors.email && <p>{errors.email.message}</p>}
+      </div>
+
 
     <div className='password-input'>
-        <label htmlFor="">
-            Lozinka
-            <br />
-            <input 
-            type={visible ? "text" : "password"}
-            placeholder='Upisite Vasu lozinku...'
-            />
-
-            
-        </label>
-
+        <label>Lozinka</label>
+        <input
+          type={visible ? "text" : "password"}
+          {...register("password", { required: "Unesite lozinku" })}
+        />
+        {errors.password && <p>{errors.password.message}</p>}
 
         {!visible ? <img
         onClick={toggleVisible}
@@ -81,15 +81,21 @@ return (
         className='not-vision' 
         src={vision} 
         alt="eye" />}
-    </div>
+      </div>
 
     <div className='agree-container'>
-    <input 
-            type="checkbox" 
+        <label className='agree-text'>
+          <input
             className='check-box'
-            />
-    <p className='agree-text'>Saglasan sam sa politikom i opstim uslovima poslovanja</p>
-    </div>
+            type="checkbox"
+            {...register("terms", {
+              required: "Morate prihvatiti uslove poslovanja",
+            })}
+          />
+          &nbsp;Saglasan sam sa politikom i opstim uslovima poslovanja
+        </label>
+        {errors.terms && <p>{errors.terms.message}</p>}
+      </div>
 
 
     
@@ -107,6 +113,7 @@ return (
 
         <button 
         className='register-google'
+        onClick={handleSubmit(onSubmit)}
         >
             <img
                 src={googleIcon}

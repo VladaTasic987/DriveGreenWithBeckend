@@ -5,10 +5,26 @@ import notVision from '../Images/NotVision.png';
 import vision from '../Images/Vision.png';
 import { useUser } from '../Context';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 export function Login() {
 
-const { visible, toggleVisible} = useUser();
+    const { visible, toggleVisible} = useUser();
+
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const [submitError, setSubmitError] = useState('');
+
+  const onSubmit = (data) => {
+    // Provera emaila i lozinke (primer)
+    if (data.email !== 'test@example.com' || data.password !== '123456') {
+      setSubmitError('Vaš email ili lozinka nije ispravna');
+    } else {
+      setSubmitError('');
+      alert('Uspešno logovanje!');
+    }
+  };
+
+
 
     return (
         <div id='login-card'>
@@ -31,26 +47,27 @@ const { visible, toggleVisible} = useUser();
 
             <div className='separator'></div>
 
+
             <div className='login-inputs-email'>
-                <label htmlFor="">
-                    Email
-                    <br />
-                    <input
-                        type="text"
-                        placeholder='Vaša email adresa'
-                    />
-                </label>
+                <label>Email:</label>
+                <input
+                {...register('email', { required: true })}
+                type="email"
+                />
+                
+                {errors.email && <p style={{ color: 'red' }}>Email je obavezan</p>}
+                {submitError && <p style={{ color: 'red' }}>{submitError}</p>}
+                
             </div>
 
             <div className='login-inputs-password'>
-                <label htmlFor="">
-                    Lozinka
-                    <br />
-                    <input
-                        type={visible ? "text" : "password"}
-                        placeholder='Vaša lozinka'
-                    />
-                   {!visible ? <img 
+                <label>Lozinka:</label>
+                <input
+                {...register('password', { required: true })}
+                type={visible ? "text" : "password"}
+                />
+                {errors.password && <p style={{ color: 'red' }}>Lozinka je obavezna</p>}
+                {!visible ? <img 
                     onClick={toggleVisible}
                     className='not-vision'
                     src={notVision} 
@@ -61,7 +78,6 @@ const { visible, toggleVisible} = useUser();
                     className='not-vision'
                     src={vision} 
                     alt="eye" /> }
-                </label>
             </div>
 
             <Link
@@ -88,7 +104,9 @@ const { visible, toggleVisible} = useUser();
                 </Link>
             </h4>
 
-            <button className='login-google'>
+            <button 
+            onClick={handleSubmit(onSubmit)}
+            className='login-google'>
                 <img
                     src={googleIcon}
                     alt="googleicon" />
