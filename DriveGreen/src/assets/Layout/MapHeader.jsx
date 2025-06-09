@@ -3,8 +3,9 @@ import location from "../Images/Location.png"
 import mapUser from "../Images/MapUser.png"
 import arrowDown from "../Images/ArrowDown.png"
 import { UserPopup } from "./UserPopup"
-import { useState } from "react"
+import { useState, useTransition } from "react"
 import { LanguagePopup } from "./LanguagePopUp"
+import { useTranslation } from "react-i18next"
 
 
 export function MapHeader({focusOnCarLocation, locationOn}) {
@@ -19,6 +20,8 @@ export function MapHeader({focusOnCarLocation, locationOn}) {
     function ToggleLang() {
         setLangVisible( prevLang => !prevLang)
     }
+
+    const {t, i18n} = useTranslation();
 
 
     return (
@@ -55,7 +58,7 @@ export function MapHeader({focusOnCarLocation, locationOn}) {
                 <p
                 className="language-text"
                 onClick={ToggleLang}
-                >SR</p>
+                >{t('langBar')}</p>
                 <img
                 className="header-down-img-again" 
                 src={arrowDown} 
