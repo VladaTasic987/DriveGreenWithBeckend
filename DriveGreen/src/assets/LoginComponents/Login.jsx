@@ -15,7 +15,6 @@ export function Login() {
     const [submitError, setSubmitError] = useState('');
 
   const onSubmit = (data) => {
-    // Provera emaila i lozinke (primer)
     if (data.email !== 'test@example.com' || data.password !== '123456') {
       setSubmitError('Vaš email ili lozinka nije ispravna');
     } else {

@@ -6,11 +6,12 @@ import ChargerLarge from "../Images/ChargerLarge.png"
 import HeartIcon from "../Images/HeartIcon.png"
 import StationRating from "../Images/StationRating.png"
 import ArrivalDepartureArrow from "../Images/ArrivalDepartureArrow.png"
-import {useUser} from "../Context.jsx";
+import { useTranslation } from "react-i18next";
+
 
 export function ViewMoreCard() {
 
-    const {partners} = useUser();
+    const {t, i18n} = useTranslation();
 
     return (
         <div id="container">
@@ -21,7 +22,7 @@ export function ViewMoreCard() {
                     to="/mapStart"
                     className='link-to-welcome'
                 >
-                    Nazad
+                    {t('back')}
                 </Link>
             </div>
 
@@ -31,7 +32,7 @@ export function ViewMoreCard() {
 
             <div className="station-info">
                 <div className="station-header">
-                    <h3>{!partners.length ?  'Robert Bocsh Charging' : partners[0].name}</h3>
+                    <h3>Robert Bocsh Charging</h3>
                     <img src={HeartIcon} alt="heart icon" />
                 </div>
 
@@ -47,32 +48,32 @@ export function ViewMoreCard() {
             <div className="station-options">
                 <div className="option-box">
                     <span className="option-title-one">Tip 3</span>
-                    <span className="option-sub">{partners.length ? partners[0].selectedOptions.Kw : '150'}KW</span>
+                    <span className="option-sub"> 150KW</span>
                 </div>
                 <div className="option-box">
-                    <span className="option-title">{partners.length ? partners[0].selectedOptions.Naplata+"RSD" : 'Besplatno'}</span>
+                    <span className="option-title">{t('free')}</span>
                     <span className="option-sub">minut</span>
                 </div>
                 <div className="option-box">
-                    <span className="option-title">Besplatno</span>
+                    <span className="option-title">{t('free')}</span>
                     <span className="option-sub">Parking</span>
                 </div>
             </div>
 
             <div className="station-time">
                 <div className="time-box">
-                    <p className="arrival">Dolazak</p>
+                    <p className="arrival">{t('arrival')}</p>
                     <div className="arrival-departure">
                         <span>Danas 9:45</span>
                         <img src={ArrivalDepartureArrow} alt="arrow down" />
                     </div>
                 </div>
                 <div className="time-box">
-                    <p>Trajanje</p>
+                    <p>{t('duration')}</p>
                     <span className="time">1h 30m</span>
                 </div>
                 <div className="time-box">
-                    <p>Odlazak</p>
+                    <p>{t('departure')}</p>
                     <div className="arrival-departure">
                         <span>Danas 11:30</span>
                         <img src={ArrivalDepartureArrow} alt="arrow down" />
@@ -84,7 +85,7 @@ export function ViewMoreCard() {
             <Link
                 className="reserve-button"
                 to="/reservedCharger"
-            >REZERVIŠI PUNJAČ</Link>
+            >{t('reserveCharger')}</Link>
 
 
             <MapFooter />

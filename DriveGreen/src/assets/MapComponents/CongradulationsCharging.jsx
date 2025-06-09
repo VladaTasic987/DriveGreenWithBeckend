@@ -6,12 +6,13 @@ import chargerInCar from "../Images/ChargerInCar.png"
 import mapBlur from "../Images/MapBlur.png"
 import { Link } from "react-router-dom"
 import {useUser} from "../Context.jsx";
-
+import { useTranslation } from "react-i18next"
 
 
 export function CongradulationsCharging() {
 
     const {partners} = useUser()
+    const {t, i18n} = useTranslation();
 
     return (
 
@@ -32,17 +33,17 @@ export function CongradulationsCharging() {
                 src={congradulationBackground} alt="background" />
 
                 <div className="text-container">
-                <h2 className="sucess-text">Cestitamo</h2>
+                <h2 className="sucess-text">{t('congradulations')}</h2>
                 </div>
 
-                <p className="ready-text">Punjenje je uspesno zavrseno</p>
+                <p className="ready-text">{t('chargingSucessful')}</p>
 
                 <img 
                 className="dotted-line"
                 src={dottedLine} 
                 alt="line" />
 
-                <h3 className="station-text">Stanica</h3>
+                <h3 className="station-text">{t("station")}</h3>
 
                 <h1 className="robert-bosch">{partners.length ? partners[0].name : "Robert Bosch Charging"}</h1>
 
@@ -53,10 +54,10 @@ export function CongradulationsCharging() {
 
                 <Link
                  
-                 className="first-button">OCENI STANICU</Link>
+                 className="first-button">{t('rateTheStation')}</Link>
                 <Link 
                 to="/mapStart"
-                className="second-button">IZADJI</Link>
+                className="second-button">{t('exit')}</Link>
 
             </div>
 

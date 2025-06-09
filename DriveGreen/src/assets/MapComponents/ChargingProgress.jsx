@@ -9,6 +9,7 @@ import mapBlur from "../Images/MapBlur.png"
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { CongradulationsCharging } from "./CongradulationsCharging"
+import { useTranslation } from "react-i18next"
 
 
 export function ChargingProgress() {
@@ -40,6 +41,8 @@ export function ChargingProgress() {
     return () => clearInterval(interval); // cleanup
   }, []);
 
+  const {t, i18n} = useTranslation();
+
 
     return (
         !changePage ? (<div id="charging-container">
@@ -53,15 +56,15 @@ export function ChargingProgress() {
 
             <div className="charging-card">
 
-                <h4>Punjenje u toku</h4>
-                <p>Vas auto ce uskoro biti spreman</p>
+                <h4>{t('chargingInProgress')}</h4>
+                <p>{t('carReady')}</p>
 
                 <img src={batteryImages[currentImageIndex]} alt="battone" />
 
                 <Link
                 to="/mapStart"
                 className="cancel-charging"
-                >OTKAZI PUNJENJE</Link>
+                >{t("cancelCharging")}</Link>
 
             </div>
 

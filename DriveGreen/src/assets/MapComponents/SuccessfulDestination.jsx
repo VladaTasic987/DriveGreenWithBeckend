@@ -5,13 +5,14 @@ import dottedLine from "../Images/DottedLine.png"
 import chargerLarge from "../Images/ChargerLarge.png"
 import mapBlur from "../Images/MapBlur.png"
 import { Link } from "react-router-dom"
-import {useUser} from "../Context.jsx";
+import { useTranslation } from "react-i18next"
 
 
 
 export function SuccessfulDestination() {
 
-    const {partners} = useUser()
+    
+    const {t, i18n} = useTranslation();
 
     return (
 
@@ -32,19 +33,19 @@ export function SuccessfulDestination() {
                 src={congradulationBackground} alt="background" />
 
                 <div className="text-container">
-                <h2 className="sucess-text">Uspesno ste stigli na destinaciju</h2>
+                <h2 className="sucess-text">{t('successDestination')}</h2>
                 </div>
 
-                <p className="ready-text">Vas punjac je spreman</p>
+                <p className="ready-text">{t('chargerReady')}</p>
 
                 <img 
                 className="dotted-line"
                 src={dottedLine} 
                 alt="line" />
 
-                <h3 className="station-text">Stanica</h3>
+                <h3 className="station-text">{t('station')}</h3>
 
-                <h1 className="robert-bosch">{partners.length ? partners[0].name : "Robert Bosch Charging"}</h1>
+                <h1 className="robert-bosch">Robert Bosch Charging</h1>
 
                 <img 
                 className="charger-img"
@@ -52,10 +53,10 @@ export function SuccessfulDestination() {
                 alt="charger" />
 
                 <Link
-                to="/chargingProgress" className="first-button">ZAPOCNI PUNJENJE</Link>
+                to="/chargingProgress" className="first-button">{t('startCharging')}</Link>
                 <Link 
                 to="/mapStart"
-                className="second-button">OTKAZI REZERVACIJU</Link>
+                className="second-button">{t('cancelReservation')}</Link>
 
             </div>
 

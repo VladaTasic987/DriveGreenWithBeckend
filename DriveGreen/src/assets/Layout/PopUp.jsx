@@ -3,10 +3,12 @@ import wifiLogo from "../Images/WifiLogo.png"
 import heartIcon from "../Images/HeartIcon.png";
 import { Link } from "react-router-dom";
 import {useUser} from "../Context.jsx";
+import { useTranslation } from "react-i18next";
 
 export function PopUp() {
 
     const {partners} = useUser()
+    const {t, i18n} = useTranslation();
    
 
     return <div id="PopUp">
@@ -30,7 +32,7 @@ export function PopUp() {
                         className="popUp-btn-link"
                         to="/viewMore"
                     >
-                        Prikaži više
+                        {t('showMore')}
                     </Link>
                 </button>
             </div>

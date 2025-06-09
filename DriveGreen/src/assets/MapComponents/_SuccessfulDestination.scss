@@ -33,12 +33,15 @@
         text-align: center;
         top: 100px;
         left: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .sucess-text {
         position: absolute;
         z-index: 3;
-        width: 100%;
+        width: 300px;
         font-family: Poppins;
         font-weight: 700;
         font-size: 19px;
