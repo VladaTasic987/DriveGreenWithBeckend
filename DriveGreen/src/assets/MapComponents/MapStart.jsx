@@ -2,9 +2,6 @@
 import { MapFooter } from "../Layout/MapFooter"
 import { MapHeader } from "../Layout/MapHeader"
 import { PopUp } from "../Layout/PopUp.jsx"
-import mapBackground from "../Images/MapBackground.png"
-import carLocation from "../Images/CarLocation.png"
-import blackThunder from "../Images/BlackThunder.png"
 import locationSmall from "../Images/LocationSmall.png"
 import {useState} from "react";
 import { MapBackground } from "../Layout/MapBackground.jsx"
@@ -31,11 +28,7 @@ export function MapStart() {
 
             <div className="map-middle">
             <MapBackground className="map-background"/>
-            {/* <img
-                className="map-background"
-                src={mapBackground}
-                alt="background"
-                onClick={onClosePopUp} /> */}
+            
             { showDetails ?
                 <button className={'popup-button'} onClick={OnShowPopUp}>
                 <span className={'charger-location-text'}>
@@ -46,17 +39,6 @@ export function MapStart() {
                 </span>
                 </button>
                 : null}
-            {/*<button className={'popup-button'} onClick={OnShowDetails}>*/}
-            {/*<img*/}
-            {/*    className="charger-location pulse"*/}
-            {/*    src={blackThunder}*/}
-            {/*    alt="charger" />*/}
-            {/*</button>*/}
-
-            {/*<img*/}
-            {/*    className={'car-location'}*/}
-            {/*    src={carLocation}*/}
-            {/*    alt="car" />*/}
             
             <MapFooter/>
             {showPopup ? <PopUp showPopup={showPopup}/> : null}

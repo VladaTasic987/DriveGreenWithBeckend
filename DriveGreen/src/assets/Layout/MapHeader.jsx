@@ -4,20 +4,27 @@ import mapUser from "../Images/MapUser.png"
 import arrowDown from "../Images/ArrowDown.png"
 import { UserPopup } from "./UserPopup"
 import { useState } from "react"
+import { LanguagePopup } from "./LanguagePopUp"
 
 
 export function MapHeader({focusOnCarLocation, locationOn}) {
 
     const [visible, setVisible] = useState(false);
+    const [langVisible, setLangVisible] = useState(false);
 
     function SeeUserInfo() {
         setVisible(prevVisible => !prevVisible)
+    }
+
+    function ToggleLang() {
+        setLangVisible( prevLang => !prevLang)
     }
 
 
     return (
 
             <div id="map-header">
+                
 
                 <div className="header-left">
                 <img src={headerLogo} alt="map-logo" />
@@ -47,11 +54,13 @@ export function MapHeader({focusOnCarLocation, locationOn}) {
                 />
                 <p
                 className="language-text"
+                onClick={ToggleLang}
                 >SR</p>
                 <img
                 className="header-down-img-again" 
                 src={arrowDown} 
                 alt="map-down" />
+                {langVisible ? <LanguagePopup/> : null}
 
                 </div>
 

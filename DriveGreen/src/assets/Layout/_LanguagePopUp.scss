@@ -1,0 +1,38 @@
+#lang-container {
+    width: 67px;
+    height: 53px;
+    border-radius: 8px;
+    border: 1px solid rgba(227, 227, 227, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 7px;
+    top: 45px;
+    right: 3px;
+    
+
+    .eng-lang-btn {
+        font-family: Plus Jakarta Sans;
+        font-weight: 500;
+        font-size: 12px;
+        width: 33px;
+        height: 15px;
+        padding: 0;
+        display: block;
+        color: rgba(44, 44, 44, 0.4);
+    }
+
+    .sr-lang-btn {
+        font-family: Plus Jakarta Sans;
+        font-weight: 500;
+        font-size: 12px;
+        width: 33px;
+        height: 15px;
+        padding: 0;
+        display: block;
+        color: rgba(44, 44, 44, 0.4);
+    }
+}
